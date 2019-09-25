@@ -21,4 +21,5 @@ export async function unmount() {
   ReactDOM.unmountComponentAtNode(document.getElementById('react15Root'));
 }
 
+mount()
 

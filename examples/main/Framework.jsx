@@ -25,15 +25,19 @@ export default function Framework(props) {
       <header className={style.header}>
         <nav>
           <ol>
-            <li><a onClick={() => goto('react app', '/react')}>react16 + antd3</a></li>
-            <li><a onClick={() => goto('react15 app', '/15react15')}>react15 + antd2</a></li>
-            <li><a onClick={() => goto('vue app', '/vue')}>vue2 + element2</a></li>
+            <li><a onClick={() => goto('react app', '/react')} title='react16 + antd3'>子应用1</a></li>
+            <li><a onClick={() => goto('react15 app', '/15react15')} title='react15 + antd2'>子应用2</a></li>
+            <li><a onClick={() => goto('vue app', '/vue')} title='vue2 + element2'>子应用3</a></li>
           </ol>
         </nav>
       </header>
-      <button onClick={setInterval}>set master interval</button>
-      {loading ? <div>loading...</div> : null}
-      <div dangerouslySetInnerHTML={{ __html: content }} className={style.appContainer}/>
+      {
+        // <button onClick={setInterval}>set master interval</button>
+      }
+      <div className={style.body}>
+        {loading ? <div className={style.loading}>loading...</div> : null}
+        <div dangerouslySetInnerHTML={{ __html: content }} className={style.appContainer}/>
+      </div>
     </>
 
   );
